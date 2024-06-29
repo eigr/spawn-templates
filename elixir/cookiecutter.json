@@ -1,0 +1,21 @@
+{
+    "elixir_version": [
+        "1.14",
+        "1.15",
+        "1.16"
+    ],
+    "app_name": "elixir_sdk_example",
+    "module_app_name": "ElixirSdkExample",
+    "app_image_name": "elixir_sdk_example",
+    "app_description": "Spawn App.",
+    "spawn_app_spawm_system": "spawn-system",
+    "spawn_sdk_version": "1.14",
+    "_copy_without_render": [
+        ".github",
+        "docs",
+        ".dockerignore",
+        ".gitignore",
+        ".envrc",
+        ".formatter.exs"
+    ]
+}
