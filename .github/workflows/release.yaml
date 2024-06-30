@@ -19,3 +19,7 @@ jobs:
       - name: Run Generate Tarballs
         run: |
           echo "TODO generate tarballs"
+
+      - name: Add tarballs in release page
+        run: |
+          echo "TODO Add tarballs in release page"
