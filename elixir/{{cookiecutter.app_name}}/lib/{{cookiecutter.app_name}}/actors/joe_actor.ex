@@ -1,4 +1,4 @@
-defmodule {{cookiecutter.module_app_name}}.Actors.JoeActor do
+defmodule {{cookiecutter.app_module_name}}.Actors.JoeActor do
   @moduledoc false
   use SpawnSdk.Actor,
     name: "Joe",

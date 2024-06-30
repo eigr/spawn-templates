@@ -1,3 +1,3 @@
-defmodule {{cookiecutter.module_app_name}} do
+defmodule {{cookiecutter.app_module_name}} do
   @moduledoc false
 end

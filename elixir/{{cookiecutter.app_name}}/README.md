@@ -1,3 +1,3 @@
-# {{{cookiecutter.module_app_name}}
+# {{{cookiecutter.app_module_name}}
 
 **TODO: Add description**

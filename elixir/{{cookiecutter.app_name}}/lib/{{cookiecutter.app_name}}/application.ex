@@ -1,4 +1,4 @@
-defmodule {{cookiecutter.module_app_name}}.Application do
+defmodule {{cookiecutter.app_module_name}}.Application do
   @moduledoc false
   use Application
 
@@ -9,12 +9,12 @@ defmodule {{cookiecutter.module_app_name}}.Application do
         SpawnSdk.System.Supervisor,
         system: "{{cookiecutter.spawn_app_spawm_system}}",
         actors: [
-          {{cookiecutter.module_app_name}}.Actors.JoeActor
+          {{cookiecutter.app_module_name}}.Actors.JoeActor
         ]
       }
     ]
 
-    opts = [strategy: :one_for_one, name: {{cookiecutter.module_app_name}}.Supervisor]
+    opts = [strategy: :one_for_one, name: {{cookiecutter.app_module_name}}.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end
