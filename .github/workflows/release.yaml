@@ -25,7 +25,15 @@ jobs:
           tar -czvf python-${{ github.ref_name }}.tar.gz rust && mv python-${{ github.ref_name }}.tar.gz artifacts/
           tar -czvf rust-${{ github.ref_name }}.tar.gz rust && mv rust-${{ github.ref_name }}.tar.gz artifacts/
 
+      - name: Update CHANGELOG
+        id: changelog
+        uses: requarks/changelog-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref_name }}
+
       - name: Upload binaries to release
+        if: always()
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
@@ -33,7 +41,7 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
           file_glob: true
-          body: "Release of ${{ github.ref_name }} version."
+          body: ${{ steps.changelog.outputs.changes }}
 
       - name: Cleanup
         shell: bash
