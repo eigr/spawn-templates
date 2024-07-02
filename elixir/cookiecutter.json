@@ -2,12 +2,13 @@
     "elixir_version": [
         "1.14",
         "1.15",
-        "1.16"
+        "1.16",
+        "1.17"
     ],
     "app_name": "elixir_sdk_example",
     "app_name_hyphenate": "elixir_sdk_example",
     "app_description": "Spawn App.",
-    "app_image_name": "eigr/spawn-elixir-example:1.4.1",
+    "app_image_tag": "eigr/spawn-elixir-example:1.4.1",
     "app_port": 8090,
     "app_module_name": "ElixirSdkExample",
     "spawn_app_spawm_system": "spawn-system",

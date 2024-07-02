@@ -2,16 +2,15 @@
 apiVersion: spawn-eigr.io/v1
 kind: ActorHost
 metadata:
-  name: {{cookiecutter.app_name_hyphenate}}
-  namespace: {{cookiecutter.spawn_app_namespace}}
+  name: { { cookiecutter.app_name_hyphenate } }
+  namespace: { { cookiecutter.spawn_app_namespace } }
   annotations:
-    spawn-eigr.io/actor-system: {{cookiecutter.spawn_app_spawm_system}}
+    spawn-eigr.io/actor-system: { { cookiecutter.spawn_app_spawm_system } }
 spec:
   host:
-    image: {{cookiecutterapp_image_name}}
+    image: { { cookiecutterapp_image_tag } }
     ports:
       - name: http
-        containerPort: {{cookiecutter.app_port}}
+        containerPort: { { cookiecutter.app_port } }
   autoscaler:
     max: 3
-
