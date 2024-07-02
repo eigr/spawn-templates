@@ -32,7 +32,8 @@ jobs:
           file: artifacts/*.tar.gz
           tag: ${{ github.ref }}
           overwrite: true
-          file_glob: tru
+          file_glob: true
+          body: "Release of ${{ github.ref_name }} version."
 
       - name: Cleanup
         shell: bash
