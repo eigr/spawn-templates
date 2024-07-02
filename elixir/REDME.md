@@ -1,3 +1,3 @@
 # Spawn Elixir SDK Template
 
-TODO: Add some examples 
+TODO: Add some examples. 
