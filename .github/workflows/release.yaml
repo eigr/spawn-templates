@@ -7,19 +7,41 @@ on:
 
 jobs:
   build:
-    name: Generate Tarballs
+    name: Publish binaries
     runs-on: ubuntu-latest
-    env:
-      MIX_ENV: test
-      ImageOS: ubuntu20
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run Generate Tarballs
+      - name: Build
+        shell: bash
         run: |
-          echo "TODO generate tarballs"
+          tar -czvf dart-${{ github.ref_name }}.tar.gz dart && mv dart-${{ github.ref_name }}.tar.gz artifacts/
+          tar -czvf elixir-${{ github.ref_name }}.tar.gz elixir && mv elixir-${{ github.ref_name }}.tar.gz artifacts/
+          tar -czvf go-${{ github.ref_name }}.tar.gz go && mv go-${{ github.ref_name }}.tar.gz artifacts/
+          tar -czvf java-spring-${{ github.ref_name }}.tar.gz java-spring && mv java-spring-${{ github.ref_name }}.tar.gz artifacts/
+          tar -czvf java-std-${{ github.ref_name }}.tar.gz java-std && mv java-std-${{ github.ref_name }}.tar.gz artifacts/
+          tar -czvf nodejs-${{ github.ref_name }}.tar.gz nodejs && mv runodejsst-${{ github.ref_name }}.tar.gz artifacts/
+          tar -czvf python-${{ github.ref_name }}.tar.gz rust && mv python-${{ github.ref_name }}.tar.gz artifacts/
+          tar -czvf rust-${{ github.ref_name }}.tar.gz rust && mv rust-${{ github.ref_name }}.tar.gz artifacts/
 
-      - name: Add tarballs in release page
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: artifacts/*.*
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: tru
+
+      - name: Cleanup
+        shell: bash
         run: |
-          echo "TODO Add tarballs in release page"
+          rm -rf artifacts/dart-${{ github.ref_name }}.tar.gz 
+          rm -rf artifacts/elixir-${{ github.ref_name }}.tar.gz 
+          rm -rf artifacts/go-${{ github.ref_name }}.tar.gz 
+          rm -rf artifacts/java-spring-${{ github.ref_name }}.tar.gz 
+          rm -rf artifacts/java-std-${{ github.ref_name }}.tar.gz 
+          rm -rf artifacts/nodejs-${{ github.ref_name }}.tar.gz 
+          rm -rf artifacts/python-${{ github.ref_name }}.tar.gz 
+          rm -rf artifacts/rust-${{ github.ref_name }}.tar.gz
