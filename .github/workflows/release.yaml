@@ -21,7 +21,7 @@ jobs:
           tar -czvf go-${{ github.ref_name }}.tar.gz go && mv go-${{ github.ref_name }}.tar.gz artifacts/
           tar -czvf java-spring-${{ github.ref_name }}.tar.gz java-spring && mv java-spring-${{ github.ref_name }}.tar.gz artifacts/
           tar -czvf java-std-${{ github.ref_name }}.tar.gz java-std && mv java-std-${{ github.ref_name }}.tar.gz artifacts/
-          tar -czvf nodejs-${{ github.ref_name }}.tar.gz nodejs && mv runodejsst-${{ github.ref_name }}.tar.gz artifacts/
+          tar -czvf nodejs-${{ github.ref_name }}.tar.gz nodejs && mv nodejs-${{ github.ref_name }}.tar.gz artifacts/
           tar -czvf python-${{ github.ref_name }}.tar.gz rust && mv python-${{ github.ref_name }}.tar.gz artifacts/
           tar -czvf rust-${{ github.ref_name }}.tar.gz rust && mv rust-${{ github.ref_name }}.tar.gz artifacts/
 
