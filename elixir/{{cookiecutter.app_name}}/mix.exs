@@ -5,7 +5,7 @@ defmodule {{cookiecutter.app_module_name}}.MixProject do
     [
       app: :{{cookiecutter.app_name}},
       version: "0.1.0",
-      elixir: "~> {{{cookiecutter.elixir_version}}",
+      elixir: "~> {{cookiecutter.elixir_version}}",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       releases: releases()
@@ -15,7 +15,7 @@ defmodule {{cookiecutter.app_module_name}}.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      mod: {{{cookiecutter.app_module_name}}.Application, []}
+      mod: {{cookiecutter.app_module_name}}.Application, []}
     ]
   end
 
