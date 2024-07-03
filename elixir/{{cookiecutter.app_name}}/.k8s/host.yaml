@@ -8,7 +8,7 @@ metadata:
     spawn-eigr.io/actor-system: {{ cookiecutter.spawn_app_spawm_system }}
 spec:
   host:
-    image: {{ cookiecutterapp_image_tag }}
+    image: {{ cookiecutter.app_image_tag }}
     ports:
       - name: http
         containerPort: {{ cookiecutter.app_port }}
