@@ -1,4 +1,4 @@
-defmodule {{{cookiecutter.app_module_name}}.MixProject do
+defmodule {{cookiecutter.app_module_name}}.MixProject do
   use Mix.Project
 
   def project do
