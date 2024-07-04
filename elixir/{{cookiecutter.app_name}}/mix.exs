@@ -25,6 +25,7 @@ defmodule {{cookiecutter.app_module_name}}.MixProject do
     [
       {:bakeware, "~> 0.2"},
       {:spawn_sdk, "~> {{cookiecutter.spawn_sdk_version}}"},
+      {# Forces a new line #}
       {%- if cookiecutter.spawn_app_statestore_type == "mariadb" -%}
       {:spawn_statestores_mariadb, "~> {{cookiecutter.spawn_sdk_version}}"}
       {%- elif cookiecutter.spawn_app_statestore_type == "mysql" -%}
