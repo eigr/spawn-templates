@@ -15,7 +15,9 @@ defmodule {{cookiecutter.app_module_name}}.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      mod: {{cookiecutter.app_module_name}}.Application, []}
+      mod: {
+        {{cookiecutter.app_module_name}}.Application, []
+      }
     ]
   end
 
