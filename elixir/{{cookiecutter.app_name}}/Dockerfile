@@ -29,9 +29,8 @@ ENV RELEASE_NAME="{{cookiecutter.app_name}}"
 # This will be the full nodename
 ENV RELEASE_NODE="${RELEASE_NAME}@${POD_IP}"
 
-RUN cd spawn_proxy/proxy \
-    && mix deps.get \
-    && mix release proxy
+RUN mix deps.get \
+    && mix release {{cookiecutter.app_name}}
 
 # ---- Application Stage ----
 FROM alpine:3.20

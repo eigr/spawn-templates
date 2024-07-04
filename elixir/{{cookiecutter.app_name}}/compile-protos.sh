@@ -14,6 +14,6 @@ mix protobuf.generate \
   --generate-descriptors=true \
   --include-path=$BASE_PATH/priv/protos/ \
   --include-path=./priv/protos/google/api \
-  --plugins=ProtobufGenerate.Plugins.GRPCWithOptions \
+  --plugin=ProtobufGenerate.Plugins.GRPCWithOptions \
   --one-file-per-module \
   $BASE_PATH/priv/protos/joe.proto

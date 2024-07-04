@@ -13,7 +13,7 @@
     "app_module_name": "ElixirSdkExample",
     "spawn_app_spawm_system": "spawn-system",
     "spawn_app_namespace": "default",
-    "spawn_app_statestore_type": "Postgres",
+    "spawn_app_statestore_type": "postgres",
     "spawn_sdk_version": "1.14",
     "_copy_without_render": [
         ".github",

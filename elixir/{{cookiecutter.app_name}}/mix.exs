@@ -25,13 +25,19 @@ defmodule {{cookiecutter.app_module_name}}.MixProject do
     [
       {:bakeware, "~> 0.2"},
       {:spawn_sdk, "~> {{cookiecutter.spawn_sdk_version}}"},
-      # You can uncomment one of those dependencies if you are going to use Persistent Actors
-      #{:spawn_statestores_mariadb, "~> {{cookiecutter.spawn_sdk_version}}"},
-      #{:spawn_statestores_mysql, "~> {{cookiecutter.spawn_sdk_version}}"},
-      #{:spawn_statestores_postgres, "~> {{cookiecutter.spawn_sdk_version}}"},
-      #{:spawn_statestores_mssql, "~> {{cookiecutter.spawn_sdk_version}}"},
-      #{:spawn_statestores_cockroachdb, "~> {{cookiecutter.spawn_sdk_version}}"},
-      #{:spawn_statestores_sqlite, "~> {{cookiecutter.spawn_sdk_version}}"}
+      {%- if cookiecutter.spawn_app_statestore_type == "mariadb" -%}
+      {:spawn_statestores_mariadb, "~> {{cookiecutter.spawn_sdk_version}}"}
+      {%- elif cookiecutter.spawn_app_statestore_type == "mysql" -%}
+      {:spawn_statestores_mysql, "~> {{cookiecutter.spawn_sdk_version}}"}
+      {%- elif cookiecutter.spawn_app_statestore_type == "postgres" -%}
+      {:spawn_statestores_postgres, "~> {{cookiecutter.spawn_sdk_version}}"}
+      {%- elif cookiecutter.spawn_app_statestore_type == "mssql" -%}
+      {:spawn_statestores_mssql, "~> {{cookiecutter.spawn_sdk_version}}"}
+      {%- elif cookiecutter.spawn_app_statestore_type == "cockroachdb" -%}
+      {:spawn_statestores_cockroachdb, "~> {{cookiecutter.spawn_sdk_version}}"}
+      {%- elif cookiecutter.spawn_app_statestore_type == "sqlite" -%}
+      {:spawn_statestores_sqlite, "~> {{cookiecutter.spawn_sdk_version}}"}
+      {% endif %}
     ]
   end
 
