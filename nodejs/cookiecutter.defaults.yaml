@@ -1,2 +1,2 @@
 default_context:
-  elixir_version: "1.14"
+  app_name: spawn_example
