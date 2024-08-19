@@ -19,9 +19,8 @@ public final class App {
     public static void main(String[] args) throws SpawnException {
         Config cfg = Config.createDefaultConfig();
 
-        PostalCodeService postalCodeService = new PostalCodeService();
         DependencyInjector dependencyInjector = SimpleDependencyInjector.createInjector();
-        dependencyInjector.bind(PostalCodeService.class, postalCodeService);
+        dependencyInjector.bind(PostalCodeService.class, new PostalCodeService());
 
         Spawn spawnSystem = new Spawn.SpawnSystem()
                 .create(cfg.spawnSystemName, dependencyInjector)

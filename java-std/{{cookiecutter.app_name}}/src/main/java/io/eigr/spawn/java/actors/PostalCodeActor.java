@@ -37,13 +37,11 @@ public class PostalCodeActor implements StatefulActor<Common.PostalCodeState> {
         log.debug("Received invocation. Message: '{}'. Context: '{}'.", msg, context);
         Common.PostalCodeState.Builder builder = Common.PostalCodeState.newBuilder();
 
-        if (context.getState().isPresent()) {
-            Common.PostalCodeState state = context.getState().get();
-            log.trace("State is present and value is '{}'.", state);
+        if (context.getState().isPresent() && !Common.PostalCodeStatus.UNKNOWN.equals(state.getStatus())) 
             return Value.at()
-                    .state(state)
-                    .response(Common.GetResponse.newBuilder().setPostalCode(state).build())
-                    .reply();
+                .state(state)
+                .response(Common.GetResponse.newBuilder().setPostalCode(state).build())
+                .reply();
         }
 
         log.trace("State not present.");
@@ -75,3 +73,4 @@ public class PostalCodeActor implements StatefulActor<Common.PostalCodeState> {
                 .reply();
     }
 }
+
