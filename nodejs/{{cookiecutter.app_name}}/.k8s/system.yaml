@@ -1,0 +1,13 @@
+---
+apiVersion: spawn-eigr.io/v1
+kind: ActorSystem
+metadata:
+  name: {{ cookiecutter.spawn_app_spawm_system }}
+  namespace: {{ cookiecutter.spawn_app_namespace }}
+spec:
+  statestore:
+    type: {{ cookiecutter.spawn_app_statestore_type }}
+    credentialsSecretRef: "{{ cookiecutter.spawn_app_statestore_type }}-connection-secret"
+  externalInvocation:
+    enabled: "true"
+    externalConnectorRef: invocation-connection-ref-secret
