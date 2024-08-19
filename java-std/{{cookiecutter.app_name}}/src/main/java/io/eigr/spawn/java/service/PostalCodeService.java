@@ -14,6 +14,8 @@ import java.util.concurrent.TimeUnit;
 public final class PostalCodeService {
     private static final Logger log = LoggerFactory.getLogger(PostalCodeService.class);
 
+    private static final String CEP_SERVICE_URL = "https://viacep.com.br/ws/%s/json/";
+
     private final OkHttpClient client;
 
     public PostalCodeService() {
@@ -31,20 +33,22 @@ public final class PostalCodeService {
         log.debug("Looking for Brazil PostalCode '{}'.", postalCode);
         // Massive use may block your access indefinitely.
         Request request = new Request.Builder()
-                .url(String.format("https://viacep.com.br/ws/%s/json/", postalCode))
+                .url(String.format(CEP_SERVICE_URL, postalCode))
                 .get()
                 .build();
 
         Call call = client.newCall(request);
         try (Response response = call.execute()) {
             assert response.body() != null;
-            if(response.isSuccessful()) {
+            if (response.isSuccessful()) {
                 String responseJson = response.body().string();
-                Type type = new TypeToken<Map<String, String>>() { }.getType();
+                Type type = new TypeToken<Map<String, String>>() {
+                }.getType();
                 Map<String, String> map = new Gson().fromJson(responseJson, type);
                 log.debug("PostalCode response '{}'.", map);
-                if(!map.containsKey("erro")) {
-                    if(!map.containsKey("pais")) map.put("pais", "Brasil");
+                if (!map.containsKey("erro")) {
+                    if (!map.containsKey("pais"))
+                        map.put("pais", "Brasil");
                     return map;
                 }
             }
