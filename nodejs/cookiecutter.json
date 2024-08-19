@@ -1,25 +1,4 @@
 {
-    "elixir_version": [
-        "1.14",
-        "1.15",
-        "1.16"
-    ],
-    "app_name": "elixir_sdk_example",
-    "app_name_hyphenate": "elixir_sdk_example",
-    "app_description": "Spawn App.",
-    "app_image_tag": "eigr/spawn-elixir-example:1.4.1",
-    "app_port": 8090,
-    "app_module_name": "ElixirSdkExample",
-    "spawn_app_spawm_system": "spawn-system",
-    "spawn_app_namespace": "default",
-    "spawn_app_statestore_type": "Postgres",
-    "spawn_sdk_version": "1.14",
-    "_copy_without_render": [
-        ".github",
-        "docs",
-        ".dockerignore",
-        ".gitignore",
-        ".envrc",
-        ".formatter.exs"
-    ]
+    "app_name": "spawn_example",
+    "spawn_system": "spawn-system"
 }

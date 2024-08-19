@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "google/protobuf/descriptor.proto";
+import "google/api/annotations.proto";
+
+service HelloWorldActor {
+  rpc SayHello(SayHelloRequest) returns (SayHelloResponse) {
+    option (google.api.http) = {
+      get: "/v1/hello_world"
+    };
+  }
+}
+
+message HelloWorldActorState {
+  int32 times = 1;
+  string last_message = 2;
+}
+
+message SayHelloRequest {
+  string message = 1;
+}
+
+message SayHelloResponse {
+  string response = 1;
+}
+
