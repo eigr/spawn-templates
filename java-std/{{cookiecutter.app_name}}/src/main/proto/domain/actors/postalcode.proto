@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package domain.actors;
+
+import "domain/common.proto";
+
+option java_package = "io.eigr.spawn.java.domain.actors";
+
+service PostalCode {
+  rpc GetPostalCodeData(domain.GetRequest) returns (domain.GetResponse);
+}

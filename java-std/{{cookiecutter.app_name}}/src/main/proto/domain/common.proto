@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package domain;
+
+option java_package = "io.eigr.spawn.java.domain";
+
+enum PostalCodeStatus {
+  UNKNOWN = 0;
+  CREATED = 1;
+  NOT_FOUND = 2;
+  FOUND = 3;
+}
+
+message PostalCodeState {
+  string code = 1;
+  PostalCodeStatus status = 2;
+  string country = 3;
+  string street = 4;
+  string state = 5;
+  string city = 6;
+}
+
+message GetRequest { string code = 1; }
+
+message GetResponse {
+  PostalCodeState postal_code = 1;
+}

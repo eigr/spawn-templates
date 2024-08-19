@@ -1,25 +1,19 @@
 {
-    "elixir_version": [
-        "1.14",
-        "1.15",
-        "1.16"
-    ],
-    "app_name": "elixir_sdk_example",
-    "app_name_hyphenate": "elixir_sdk_example",
-    "app_description": "Spawn App.",
-    "app_image_tag": "eigr/spawn-elixir-example:1.4.1",
-    "app_port": 8090,
-    "app_module_name": "ElixirSdkExample",
-    "spawn_app_spawm_system": "spawn-system",
+    "app_name": "postalcode",
+    "app_name_hyphenate": "postalcode",
+    "app_description": "Spawn Java Standard App.",
+    "app_image_tag": "ttl.sh/spawn-java-postalcode:1h",
+    "app_port": 8091,
+    "app_version": "1.0.1",
+    "spawn_app_spawn_system": "spawn-system",
     "spawn_app_namespace": "default",
-    "spawn_app_statestore_type": "Postgres",
-    "spawn_sdk_version": "1.14",
+    "spawn_app_statestore_type": "native",
+    "spawn_sdk_version": "v1.3.1",
     "_copy_without_render": [
         ".github",
         "docs",
         ".dockerignore",
         ".gitignore",
-        ".envrc",
-        ".formatter.exs"
+        ".envrc"
     ]
 }
