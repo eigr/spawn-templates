@@ -71,7 +71,6 @@ public final class App {
         public String toString() {
             return new StringJoiner(", ", Config.class.getSimpleName() + "[", "]")
                     .add("DELAY_SECONDS='" + startupDelaySeconds + "'")
-                    .add("AUTH_TOKEN='" + authToken + "'")
                     .add("USER_FUNCTION_HOST='" + userFunctionHost + "'")
                     .add("USER_FUNCTION_PORT='" + userFunctionPort + "'")
                     .add("SPAWN_PROXY_HOST='" + spawnProxyHost + "'")
