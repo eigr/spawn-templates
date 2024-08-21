@@ -3,8 +3,8 @@
 
 package io.eigr.spawn.java.domain;
 
-public final class Common {
-  private Common() {}
+public final class DomainProto {
+  private DomainProto() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -114,7 +114,7 @@ public final class Common {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return io.eigr.spawn.java.domain.Common.getDescriptor().getEnumTypes().get(0);
+      return io.eigr.spawn.java.domain.DomainProto.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final PostalCodeStatus[] VALUES = values();
@@ -165,7 +165,7 @@ public final class Common {
      * <code>.domain.PostalCodeStatus status = 2;</code>
      * @return The status.
      */
-    io.eigr.spawn.java.domain.Common.PostalCodeStatus getStatus();
+    io.eigr.spawn.java.domain.DomainProto.PostalCodeStatus getStatus();
 
     /**
      * <code>string country = 3;</code>
@@ -323,15 +323,15 @@ public final class Common {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.eigr.spawn.java.domain.Common.internal_static_domain_PostalCodeState_descriptor;
+      return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_PostalCodeState_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.eigr.spawn.java.domain.Common.internal_static_domain_PostalCodeState_fieldAccessorTable
+      return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_PostalCodeState_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.eigr.spawn.java.domain.Common.PostalCodeState.class, io.eigr.spawn.java.domain.Common.PostalCodeState.Builder.class);
+              io.eigr.spawn.java.domain.DomainProto.PostalCodeState.class, io.eigr.spawn.java.domain.DomainProto.PostalCodeState.Builder.class);
     }
 
     public static final int CODE_FIELD_NUMBER = 1;
@@ -385,10 +385,10 @@ public final class Common {
      * <code>.domain.PostalCodeStatus status = 2;</code>
      * @return The status.
      */
-    @java.lang.Override public io.eigr.spawn.java.domain.Common.PostalCodeStatus getStatus() {
+    @java.lang.Override public io.eigr.spawn.java.domain.DomainProto.PostalCodeStatus getStatus() {
       @SuppressWarnings("deprecation")
-      io.eigr.spawn.java.domain.Common.PostalCodeStatus result = io.eigr.spawn.java.domain.Common.PostalCodeStatus.valueOf(status_);
-      return result == null ? io.eigr.spawn.java.domain.Common.PostalCodeStatus.UNRECOGNIZED : result;
+      io.eigr.spawn.java.domain.DomainProto.PostalCodeStatus result = io.eigr.spawn.java.domain.DomainProto.PostalCodeStatus.valueOf(status_);
+      return result == null ? io.eigr.spawn.java.domain.DomainProto.PostalCodeStatus.UNRECOGNIZED : result;
     }
 
     public static final int COUNTRY_FIELD_NUMBER = 3;
@@ -560,7 +560,7 @@ public final class Common {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, code_);
       }
-      if (status_ != io.eigr.spawn.java.domain.Common.PostalCodeStatus.UNKNOWN.getNumber()) {
+      if (status_ != io.eigr.spawn.java.domain.DomainProto.PostalCodeStatus.UNKNOWN.getNumber()) {
         output.writeEnum(2, status_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(country_)) {
@@ -587,7 +587,7 @@ public final class Common {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, code_);
       }
-      if (status_ != io.eigr.spawn.java.domain.Common.PostalCodeStatus.UNKNOWN.getNumber()) {
+      if (status_ != io.eigr.spawn.java.domain.DomainProto.PostalCodeStatus.UNKNOWN.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, status_);
       }
@@ -613,10 +613,10 @@ public final class Common {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof io.eigr.spawn.java.domain.Common.PostalCodeState)) {
+      if (!(obj instanceof io.eigr.spawn.java.domain.DomainProto.PostalCodeState)) {
         return super.equals(obj);
       }
-      io.eigr.spawn.java.domain.Common.PostalCodeState other = (io.eigr.spawn.java.domain.Common.PostalCodeState) obj;
+      io.eigr.spawn.java.domain.DomainProto.PostalCodeState other = (io.eigr.spawn.java.domain.DomainProto.PostalCodeState) obj;
 
       if (!getCode()
           .equals(other.getCode())) return false;
@@ -657,69 +657,69 @@ public final class Common {
       return hash;
     }
 
-    public static io.eigr.spawn.java.domain.Common.PostalCodeState parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.PostalCodeState parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.eigr.spawn.java.domain.Common.PostalCodeState parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.PostalCodeState parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.PostalCodeState parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.PostalCodeState parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.eigr.spawn.java.domain.Common.PostalCodeState parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.PostalCodeState parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.PostalCodeState parseFrom(byte[] data)
+    public static io.eigr.spawn.java.domain.DomainProto.PostalCodeState parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.eigr.spawn.java.domain.Common.PostalCodeState parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.PostalCodeState parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.PostalCodeState parseFrom(java.io.InputStream input)
+    public static io.eigr.spawn.java.domain.DomainProto.PostalCodeState parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.eigr.spawn.java.domain.Common.PostalCodeState parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.PostalCodeState parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.PostalCodeState parseDelimitedFrom(java.io.InputStream input)
+    public static io.eigr.spawn.java.domain.DomainProto.PostalCodeState parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static io.eigr.spawn.java.domain.Common.PostalCodeState parseDelimitedFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.PostalCodeState parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.PostalCodeState parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.PostalCodeState parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.eigr.spawn.java.domain.Common.PostalCodeState parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.PostalCodeState parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -732,7 +732,7 @@ public final class Common {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(io.eigr.spawn.java.domain.Common.PostalCodeState prototype) {
+    public static Builder newBuilder(io.eigr.spawn.java.domain.DomainProto.PostalCodeState prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -753,21 +753,21 @@ public final class Common {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:domain.PostalCodeState)
-        io.eigr.spawn.java.domain.Common.PostalCodeStateOrBuilder {
+        io.eigr.spawn.java.domain.DomainProto.PostalCodeStateOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.eigr.spawn.java.domain.Common.internal_static_domain_PostalCodeState_descriptor;
+        return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_PostalCodeState_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.eigr.spawn.java.domain.Common.internal_static_domain_PostalCodeState_fieldAccessorTable
+        return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_PostalCodeState_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                io.eigr.spawn.java.domain.Common.PostalCodeState.class, io.eigr.spawn.java.domain.Common.PostalCodeState.Builder.class);
+                io.eigr.spawn.java.domain.DomainProto.PostalCodeState.class, io.eigr.spawn.java.domain.DomainProto.PostalCodeState.Builder.class);
       }
 
-      // Construct using io.eigr.spawn.java.domain.Common.PostalCodeState.newBuilder()
+      // Construct using io.eigr.spawn.java.domain.DomainProto.PostalCodeState.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -803,17 +803,17 @@ public final class Common {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.eigr.spawn.java.domain.Common.internal_static_domain_PostalCodeState_descriptor;
+        return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_PostalCodeState_descriptor;
       }
 
       @java.lang.Override
-      public io.eigr.spawn.java.domain.Common.PostalCodeState getDefaultInstanceForType() {
-        return io.eigr.spawn.java.domain.Common.PostalCodeState.getDefaultInstance();
+      public io.eigr.spawn.java.domain.DomainProto.PostalCodeState getDefaultInstanceForType() {
+        return io.eigr.spawn.java.domain.DomainProto.PostalCodeState.getDefaultInstance();
       }
 
       @java.lang.Override
-      public io.eigr.spawn.java.domain.Common.PostalCodeState build() {
-        io.eigr.spawn.java.domain.Common.PostalCodeState result = buildPartial();
+      public io.eigr.spawn.java.domain.DomainProto.PostalCodeState build() {
+        io.eigr.spawn.java.domain.DomainProto.PostalCodeState result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -821,8 +821,8 @@ public final class Common {
       }
 
       @java.lang.Override
-      public io.eigr.spawn.java.domain.Common.PostalCodeState buildPartial() {
-        io.eigr.spawn.java.domain.Common.PostalCodeState result = new io.eigr.spawn.java.domain.Common.PostalCodeState(this);
+      public io.eigr.spawn.java.domain.DomainProto.PostalCodeState buildPartial() {
+        io.eigr.spawn.java.domain.DomainProto.PostalCodeState result = new io.eigr.spawn.java.domain.DomainProto.PostalCodeState(this);
         result.code_ = code_;
         result.status_ = status_;
         result.country_ = country_;
@@ -867,16 +867,16 @@ public final class Common {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.eigr.spawn.java.domain.Common.PostalCodeState) {
-          return mergeFrom((io.eigr.spawn.java.domain.Common.PostalCodeState)other);
+        if (other instanceof io.eigr.spawn.java.domain.DomainProto.PostalCodeState) {
+          return mergeFrom((io.eigr.spawn.java.domain.DomainProto.PostalCodeState)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(io.eigr.spawn.java.domain.Common.PostalCodeState other) {
-        if (other == io.eigr.spawn.java.domain.Common.PostalCodeState.getDefaultInstance()) return this;
+      public Builder mergeFrom(io.eigr.spawn.java.domain.DomainProto.PostalCodeState other) {
+        if (other == io.eigr.spawn.java.domain.DomainProto.PostalCodeState.getDefaultInstance()) return this;
         if (!other.getCode().isEmpty()) {
           code_ = other.code_;
           onChanged();
@@ -915,11 +915,11 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        io.eigr.spawn.java.domain.Common.PostalCodeState parsedMessage = null;
+        io.eigr.spawn.java.domain.DomainProto.PostalCodeState parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.eigr.spawn.java.domain.Common.PostalCodeState) e.getUnfinishedMessage();
+          parsedMessage = (io.eigr.spawn.java.domain.DomainProto.PostalCodeState) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1029,17 +1029,17 @@ public final class Common {
        * @return The status.
        */
       @java.lang.Override
-      public io.eigr.spawn.java.domain.Common.PostalCodeStatus getStatus() {
+      public io.eigr.spawn.java.domain.DomainProto.PostalCodeStatus getStatus() {
         @SuppressWarnings("deprecation")
-        io.eigr.spawn.java.domain.Common.PostalCodeStatus result = io.eigr.spawn.java.domain.Common.PostalCodeStatus.valueOf(status_);
-        return result == null ? io.eigr.spawn.java.domain.Common.PostalCodeStatus.UNRECOGNIZED : result;
+        io.eigr.spawn.java.domain.DomainProto.PostalCodeStatus result = io.eigr.spawn.java.domain.DomainProto.PostalCodeStatus.valueOf(status_);
+        return result == null ? io.eigr.spawn.java.domain.DomainProto.PostalCodeStatus.UNRECOGNIZED : result;
       }
       /**
        * <code>.domain.PostalCodeStatus status = 2;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(io.eigr.spawn.java.domain.Common.PostalCodeStatus value) {
+      public Builder setStatus(io.eigr.spawn.java.domain.DomainProto.PostalCodeStatus value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1379,12 +1379,12 @@ public final class Common {
     }
 
     // @@protoc_insertion_point(class_scope:domain.PostalCodeState)
-    private static final io.eigr.spawn.java.domain.Common.PostalCodeState DEFAULT_INSTANCE;
+    private static final io.eigr.spawn.java.domain.DomainProto.PostalCodeState DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new io.eigr.spawn.java.domain.Common.PostalCodeState();
+      DEFAULT_INSTANCE = new io.eigr.spawn.java.domain.DomainProto.PostalCodeState();
     }
 
-    public static io.eigr.spawn.java.domain.Common.PostalCodeState getDefaultInstance() {
+    public static io.eigr.spawn.java.domain.DomainProto.PostalCodeState getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1409,7 +1409,7 @@ public final class Common {
     }
 
     @java.lang.Override
-    public io.eigr.spawn.java.domain.Common.PostalCodeState getDefaultInstanceForType() {
+    public io.eigr.spawn.java.domain.DomainProto.PostalCodeState getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1504,15 +1504,15 @@ public final class Common {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.eigr.spawn.java.domain.Common.internal_static_domain_GetRequest_descriptor;
+      return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_GetRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.eigr.spawn.java.domain.Common.internal_static_domain_GetRequest_fieldAccessorTable
+      return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_GetRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.eigr.spawn.java.domain.Common.GetRequest.class, io.eigr.spawn.java.domain.Common.GetRequest.Builder.class);
+              io.eigr.spawn.java.domain.DomainProto.GetRequest.class, io.eigr.spawn.java.domain.DomainProto.GetRequest.Builder.class);
     }
 
     public static final int CODE_FIELD_NUMBER = 1;
@@ -1592,10 +1592,10 @@ public final class Common {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof io.eigr.spawn.java.domain.Common.GetRequest)) {
+      if (!(obj instanceof io.eigr.spawn.java.domain.DomainProto.GetRequest)) {
         return super.equals(obj);
       }
-      io.eigr.spawn.java.domain.Common.GetRequest other = (io.eigr.spawn.java.domain.Common.GetRequest) obj;
+      io.eigr.spawn.java.domain.DomainProto.GetRequest other = (io.eigr.spawn.java.domain.DomainProto.GetRequest) obj;
 
       if (!getCode()
           .equals(other.getCode())) return false;
@@ -1617,69 +1617,69 @@ public final class Common {
       return hash;
     }
 
-    public static io.eigr.spawn.java.domain.Common.GetRequest parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.eigr.spawn.java.domain.Common.GetRequest parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.GetRequest parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.eigr.spawn.java.domain.Common.GetRequest parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.GetRequest parseFrom(byte[] data)
+    public static io.eigr.spawn.java.domain.DomainProto.GetRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.eigr.spawn.java.domain.Common.GetRequest parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.GetRequest parseFrom(java.io.InputStream input)
+    public static io.eigr.spawn.java.domain.DomainProto.GetRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.eigr.spawn.java.domain.Common.GetRequest parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.GetRequest parseDelimitedFrom(java.io.InputStream input)
+    public static io.eigr.spawn.java.domain.DomainProto.GetRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static io.eigr.spawn.java.domain.Common.GetRequest parseDelimitedFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.GetRequest parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.eigr.spawn.java.domain.Common.GetRequest parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1692,7 +1692,7 @@ public final class Common {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(io.eigr.spawn.java.domain.Common.GetRequest prototype) {
+    public static Builder newBuilder(io.eigr.spawn.java.domain.DomainProto.GetRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1713,21 +1713,21 @@ public final class Common {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:domain.GetRequest)
-        io.eigr.spawn.java.domain.Common.GetRequestOrBuilder {
+        io.eigr.spawn.java.domain.DomainProto.GetRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.eigr.spawn.java.domain.Common.internal_static_domain_GetRequest_descriptor;
+        return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_GetRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.eigr.spawn.java.domain.Common.internal_static_domain_GetRequest_fieldAccessorTable
+        return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_GetRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                io.eigr.spawn.java.domain.Common.GetRequest.class, io.eigr.spawn.java.domain.Common.GetRequest.Builder.class);
+                io.eigr.spawn.java.domain.DomainProto.GetRequest.class, io.eigr.spawn.java.domain.DomainProto.GetRequest.Builder.class);
       }
 
-      // Construct using io.eigr.spawn.java.domain.Common.GetRequest.newBuilder()
+      // Construct using io.eigr.spawn.java.domain.DomainProto.GetRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1753,17 +1753,17 @@ public final class Common {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.eigr.spawn.java.domain.Common.internal_static_domain_GetRequest_descriptor;
+        return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_GetRequest_descriptor;
       }
 
       @java.lang.Override
-      public io.eigr.spawn.java.domain.Common.GetRequest getDefaultInstanceForType() {
-        return io.eigr.spawn.java.domain.Common.GetRequest.getDefaultInstance();
+      public io.eigr.spawn.java.domain.DomainProto.GetRequest getDefaultInstanceForType() {
+        return io.eigr.spawn.java.domain.DomainProto.GetRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public io.eigr.spawn.java.domain.Common.GetRequest build() {
-        io.eigr.spawn.java.domain.Common.GetRequest result = buildPartial();
+      public io.eigr.spawn.java.domain.DomainProto.GetRequest build() {
+        io.eigr.spawn.java.domain.DomainProto.GetRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1771,8 +1771,8 @@ public final class Common {
       }
 
       @java.lang.Override
-      public io.eigr.spawn.java.domain.Common.GetRequest buildPartial() {
-        io.eigr.spawn.java.domain.Common.GetRequest result = new io.eigr.spawn.java.domain.Common.GetRequest(this);
+      public io.eigr.spawn.java.domain.DomainProto.GetRequest buildPartial() {
+        io.eigr.spawn.java.domain.DomainProto.GetRequest result = new io.eigr.spawn.java.domain.DomainProto.GetRequest(this);
         result.code_ = code_;
         onBuilt();
         return result;
@@ -1812,16 +1812,16 @@ public final class Common {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.eigr.spawn.java.domain.Common.GetRequest) {
-          return mergeFrom((io.eigr.spawn.java.domain.Common.GetRequest)other);
+        if (other instanceof io.eigr.spawn.java.domain.DomainProto.GetRequest) {
+          return mergeFrom((io.eigr.spawn.java.domain.DomainProto.GetRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(io.eigr.spawn.java.domain.Common.GetRequest other) {
-        if (other == io.eigr.spawn.java.domain.Common.GetRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(io.eigr.spawn.java.domain.DomainProto.GetRequest other) {
+        if (other == io.eigr.spawn.java.domain.DomainProto.GetRequest.getDefaultInstance()) return this;
         if (!other.getCode().isEmpty()) {
           code_ = other.code_;
           onChanged();
@@ -1841,11 +1841,11 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        io.eigr.spawn.java.domain.Common.GetRequest parsedMessage = null;
+        io.eigr.spawn.java.domain.DomainProto.GetRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.eigr.spawn.java.domain.Common.GetRequest) e.getUnfinishedMessage();
+          parsedMessage = (io.eigr.spawn.java.domain.DomainProto.GetRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1947,12 +1947,12 @@ public final class Common {
     }
 
     // @@protoc_insertion_point(class_scope:domain.GetRequest)
-    private static final io.eigr.spawn.java.domain.Common.GetRequest DEFAULT_INSTANCE;
+    private static final io.eigr.spawn.java.domain.DomainProto.GetRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new io.eigr.spawn.java.domain.Common.GetRequest();
+      DEFAULT_INSTANCE = new io.eigr.spawn.java.domain.DomainProto.GetRequest();
     }
 
-    public static io.eigr.spawn.java.domain.Common.GetRequest getDefaultInstance() {
+    public static io.eigr.spawn.java.domain.DomainProto.GetRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1977,7 +1977,7 @@ public final class Common {
     }
 
     @java.lang.Override
-    public io.eigr.spawn.java.domain.Common.GetRequest getDefaultInstanceForType() {
+    public io.eigr.spawn.java.domain.DomainProto.GetRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1996,11 +1996,11 @@ public final class Common {
      * <code>.domain.PostalCodeState postal_code = 1;</code>
      * @return The postalCode.
      */
-    io.eigr.spawn.java.domain.Common.PostalCodeState getPostalCode();
+    io.eigr.spawn.java.domain.DomainProto.PostalCodeState getPostalCode();
     /**
      * <code>.domain.PostalCodeState postal_code = 1;</code>
      */
-    io.eigr.spawn.java.domain.Common.PostalCodeStateOrBuilder getPostalCodeOrBuilder();
+    io.eigr.spawn.java.domain.DomainProto.PostalCodeStateOrBuilder getPostalCodeOrBuilder();
   }
   /**
    * Protobuf type {@code domain.GetResponse}
@@ -2048,11 +2048,11 @@ public final class Common {
               done = true;
               break;
             case 10: {
-              io.eigr.spawn.java.domain.Common.PostalCodeState.Builder subBuilder = null;
+              io.eigr.spawn.java.domain.DomainProto.PostalCodeState.Builder subBuilder = null;
               if (postalCode_ != null) {
                 subBuilder = postalCode_.toBuilder();
               }
-              postalCode_ = input.readMessage(io.eigr.spawn.java.domain.Common.PostalCodeState.parser(), extensionRegistry);
+              postalCode_ = input.readMessage(io.eigr.spawn.java.domain.DomainProto.PostalCodeState.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(postalCode_);
                 postalCode_ = subBuilder.buildPartial();
@@ -2081,19 +2081,19 @@ public final class Common {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.eigr.spawn.java.domain.Common.internal_static_domain_GetResponse_descriptor;
+      return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_GetResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.eigr.spawn.java.domain.Common.internal_static_domain_GetResponse_fieldAccessorTable
+      return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_GetResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.eigr.spawn.java.domain.Common.GetResponse.class, io.eigr.spawn.java.domain.Common.GetResponse.Builder.class);
+              io.eigr.spawn.java.domain.DomainProto.GetResponse.class, io.eigr.spawn.java.domain.DomainProto.GetResponse.Builder.class);
     }
 
     public static final int POSTAL_CODE_FIELD_NUMBER = 1;
-    private io.eigr.spawn.java.domain.Common.PostalCodeState postalCode_;
+    private io.eigr.spawn.java.domain.DomainProto.PostalCodeState postalCode_;
     /**
      * <code>.domain.PostalCodeState postal_code = 1;</code>
      * @return Whether the postalCode field is set.
@@ -2107,14 +2107,14 @@ public final class Common {
      * @return The postalCode.
      */
     @java.lang.Override
-    public io.eigr.spawn.java.domain.Common.PostalCodeState getPostalCode() {
-      return postalCode_ == null ? io.eigr.spawn.java.domain.Common.PostalCodeState.getDefaultInstance() : postalCode_;
+    public io.eigr.spawn.java.domain.DomainProto.PostalCodeState getPostalCode() {
+      return postalCode_ == null ? io.eigr.spawn.java.domain.DomainProto.PostalCodeState.getDefaultInstance() : postalCode_;
     }
     /**
      * <code>.domain.PostalCodeState postal_code = 1;</code>
      */
     @java.lang.Override
-    public io.eigr.spawn.java.domain.Common.PostalCodeStateOrBuilder getPostalCodeOrBuilder() {
+    public io.eigr.spawn.java.domain.DomainProto.PostalCodeStateOrBuilder getPostalCodeOrBuilder() {
       return getPostalCode();
     }
 
@@ -2158,10 +2158,10 @@ public final class Common {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof io.eigr.spawn.java.domain.Common.GetResponse)) {
+      if (!(obj instanceof io.eigr.spawn.java.domain.DomainProto.GetResponse)) {
         return super.equals(obj);
       }
-      io.eigr.spawn.java.domain.Common.GetResponse other = (io.eigr.spawn.java.domain.Common.GetResponse) obj;
+      io.eigr.spawn.java.domain.DomainProto.GetResponse other = (io.eigr.spawn.java.domain.DomainProto.GetResponse) obj;
 
       if (hasPostalCode() != other.hasPostalCode()) return false;
       if (hasPostalCode()) {
@@ -2188,69 +2188,69 @@ public final class Common {
       return hash;
     }
 
-    public static io.eigr.spawn.java.domain.Common.GetResponse parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.eigr.spawn.java.domain.Common.GetResponse parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.GetResponse parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.eigr.spawn.java.domain.Common.GetResponse parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.GetResponse parseFrom(byte[] data)
+    public static io.eigr.spawn.java.domain.DomainProto.GetResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.eigr.spawn.java.domain.Common.GetResponse parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.GetResponse parseFrom(java.io.InputStream input)
+    public static io.eigr.spawn.java.domain.DomainProto.GetResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.eigr.spawn.java.domain.Common.GetResponse parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.GetResponse parseDelimitedFrom(java.io.InputStream input)
+    public static io.eigr.spawn.java.domain.DomainProto.GetResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static io.eigr.spawn.java.domain.Common.GetResponse parseDelimitedFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.eigr.spawn.java.domain.Common.GetResponse parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.eigr.spawn.java.domain.Common.GetResponse parseFrom(
+    public static io.eigr.spawn.java.domain.DomainProto.GetResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2263,7 +2263,7 @@ public final class Common {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(io.eigr.spawn.java.domain.Common.GetResponse prototype) {
+    public static Builder newBuilder(io.eigr.spawn.java.domain.DomainProto.GetResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2284,21 +2284,21 @@ public final class Common {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:domain.GetResponse)
-        io.eigr.spawn.java.domain.Common.GetResponseOrBuilder {
+        io.eigr.spawn.java.domain.DomainProto.GetResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.eigr.spawn.java.domain.Common.internal_static_domain_GetResponse_descriptor;
+        return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_GetResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.eigr.spawn.java.domain.Common.internal_static_domain_GetResponse_fieldAccessorTable
+        return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_GetResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                io.eigr.spawn.java.domain.Common.GetResponse.class, io.eigr.spawn.java.domain.Common.GetResponse.Builder.class);
+                io.eigr.spawn.java.domain.DomainProto.GetResponse.class, io.eigr.spawn.java.domain.DomainProto.GetResponse.Builder.class);
       }
 
-      // Construct using io.eigr.spawn.java.domain.Common.GetResponse.newBuilder()
+      // Construct using io.eigr.spawn.java.domain.DomainProto.GetResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2328,17 +2328,17 @@ public final class Common {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.eigr.spawn.java.domain.Common.internal_static_domain_GetResponse_descriptor;
+        return io.eigr.spawn.java.domain.DomainProto.internal_static_domain_GetResponse_descriptor;
       }
 
       @java.lang.Override
-      public io.eigr.spawn.java.domain.Common.GetResponse getDefaultInstanceForType() {
-        return io.eigr.spawn.java.domain.Common.GetResponse.getDefaultInstance();
+      public io.eigr.spawn.java.domain.DomainProto.GetResponse getDefaultInstanceForType() {
+        return io.eigr.spawn.java.domain.DomainProto.GetResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public io.eigr.spawn.java.domain.Common.GetResponse build() {
-        io.eigr.spawn.java.domain.Common.GetResponse result = buildPartial();
+      public io.eigr.spawn.java.domain.DomainProto.GetResponse build() {
+        io.eigr.spawn.java.domain.DomainProto.GetResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2346,8 +2346,8 @@ public final class Common {
       }
 
       @java.lang.Override
-      public io.eigr.spawn.java.domain.Common.GetResponse buildPartial() {
-        io.eigr.spawn.java.domain.Common.GetResponse result = new io.eigr.spawn.java.domain.Common.GetResponse(this);
+      public io.eigr.spawn.java.domain.DomainProto.GetResponse buildPartial() {
+        io.eigr.spawn.java.domain.DomainProto.GetResponse result = new io.eigr.spawn.java.domain.DomainProto.GetResponse(this);
         if (postalCodeBuilder_ == null) {
           result.postalCode_ = postalCode_;
         } else {
@@ -2391,16 +2391,16 @@ public final class Common {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.eigr.spawn.java.domain.Common.GetResponse) {
-          return mergeFrom((io.eigr.spawn.java.domain.Common.GetResponse)other);
+        if (other instanceof io.eigr.spawn.java.domain.DomainProto.GetResponse) {
+          return mergeFrom((io.eigr.spawn.java.domain.DomainProto.GetResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(io.eigr.spawn.java.domain.Common.GetResponse other) {
-        if (other == io.eigr.spawn.java.domain.Common.GetResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(io.eigr.spawn.java.domain.DomainProto.GetResponse other) {
+        if (other == io.eigr.spawn.java.domain.DomainProto.GetResponse.getDefaultInstance()) return this;
         if (other.hasPostalCode()) {
           mergePostalCode(other.getPostalCode());
         }
@@ -2419,11 +2419,11 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        io.eigr.spawn.java.domain.Common.GetResponse parsedMessage = null;
+        io.eigr.spawn.java.domain.DomainProto.GetResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.eigr.spawn.java.domain.Common.GetResponse) e.getUnfinishedMessage();
+          parsedMessage = (io.eigr.spawn.java.domain.DomainProto.GetResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2433,9 +2433,9 @@ public final class Common {
         return this;
       }
 
-      private io.eigr.spawn.java.domain.Common.PostalCodeState postalCode_;
+      private io.eigr.spawn.java.domain.DomainProto.PostalCodeState postalCode_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.eigr.spawn.java.domain.Common.PostalCodeState, io.eigr.spawn.java.domain.Common.PostalCodeState.Builder, io.eigr.spawn.java.domain.Common.PostalCodeStateOrBuilder> postalCodeBuilder_;
+          io.eigr.spawn.java.domain.DomainProto.PostalCodeState, io.eigr.spawn.java.domain.DomainProto.PostalCodeState.Builder, io.eigr.spawn.java.domain.DomainProto.PostalCodeStateOrBuilder> postalCodeBuilder_;
       /**
        * <code>.domain.PostalCodeState postal_code = 1;</code>
        * @return Whether the postalCode field is set.
@@ -2447,9 +2447,9 @@ public final class Common {
        * <code>.domain.PostalCodeState postal_code = 1;</code>
        * @return The postalCode.
        */
-      public io.eigr.spawn.java.domain.Common.PostalCodeState getPostalCode() {
+      public io.eigr.spawn.java.domain.DomainProto.PostalCodeState getPostalCode() {
         if (postalCodeBuilder_ == null) {
-          return postalCode_ == null ? io.eigr.spawn.java.domain.Common.PostalCodeState.getDefaultInstance() : postalCode_;
+          return postalCode_ == null ? io.eigr.spawn.java.domain.DomainProto.PostalCodeState.getDefaultInstance() : postalCode_;
         } else {
           return postalCodeBuilder_.getMessage();
         }
@@ -2457,7 +2457,7 @@ public final class Common {
       /**
        * <code>.domain.PostalCodeState postal_code = 1;</code>
        */
-      public Builder setPostalCode(io.eigr.spawn.java.domain.Common.PostalCodeState value) {
+      public Builder setPostalCode(io.eigr.spawn.java.domain.DomainProto.PostalCodeState value) {
         if (postalCodeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2474,7 +2474,7 @@ public final class Common {
        * <code>.domain.PostalCodeState postal_code = 1;</code>
        */
       public Builder setPostalCode(
-          io.eigr.spawn.java.domain.Common.PostalCodeState.Builder builderForValue) {
+          io.eigr.spawn.java.domain.DomainProto.PostalCodeState.Builder builderForValue) {
         if (postalCodeBuilder_ == null) {
           postalCode_ = builderForValue.build();
           onChanged();
@@ -2487,11 +2487,11 @@ public final class Common {
       /**
        * <code>.domain.PostalCodeState postal_code = 1;</code>
        */
-      public Builder mergePostalCode(io.eigr.spawn.java.domain.Common.PostalCodeState value) {
+      public Builder mergePostalCode(io.eigr.spawn.java.domain.DomainProto.PostalCodeState value) {
         if (postalCodeBuilder_ == null) {
           if (postalCode_ != null) {
             postalCode_ =
-              io.eigr.spawn.java.domain.Common.PostalCodeState.newBuilder(postalCode_).mergeFrom(value).buildPartial();
+              io.eigr.spawn.java.domain.DomainProto.PostalCodeState.newBuilder(postalCode_).mergeFrom(value).buildPartial();
           } else {
             postalCode_ = value;
           }
@@ -2519,7 +2519,7 @@ public final class Common {
       /**
        * <code>.domain.PostalCodeState postal_code = 1;</code>
        */
-      public io.eigr.spawn.java.domain.Common.PostalCodeState.Builder getPostalCodeBuilder() {
+      public io.eigr.spawn.java.domain.DomainProto.PostalCodeState.Builder getPostalCodeBuilder() {
         
         onChanged();
         return getPostalCodeFieldBuilder().getBuilder();
@@ -2527,23 +2527,23 @@ public final class Common {
       /**
        * <code>.domain.PostalCodeState postal_code = 1;</code>
        */
-      public io.eigr.spawn.java.domain.Common.PostalCodeStateOrBuilder getPostalCodeOrBuilder() {
+      public io.eigr.spawn.java.domain.DomainProto.PostalCodeStateOrBuilder getPostalCodeOrBuilder() {
         if (postalCodeBuilder_ != null) {
           return postalCodeBuilder_.getMessageOrBuilder();
         } else {
           return postalCode_ == null ?
-              io.eigr.spawn.java.domain.Common.PostalCodeState.getDefaultInstance() : postalCode_;
+              io.eigr.spawn.java.domain.DomainProto.PostalCodeState.getDefaultInstance() : postalCode_;
         }
       }
       /**
        * <code>.domain.PostalCodeState postal_code = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.eigr.spawn.java.domain.Common.PostalCodeState, io.eigr.spawn.java.domain.Common.PostalCodeState.Builder, io.eigr.spawn.java.domain.Common.PostalCodeStateOrBuilder> 
+          io.eigr.spawn.java.domain.DomainProto.PostalCodeState, io.eigr.spawn.java.domain.DomainProto.PostalCodeState.Builder, io.eigr.spawn.java.domain.DomainProto.PostalCodeStateOrBuilder> 
           getPostalCodeFieldBuilder() {
         if (postalCodeBuilder_ == null) {
           postalCodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.eigr.spawn.java.domain.Common.PostalCodeState, io.eigr.spawn.java.domain.Common.PostalCodeState.Builder, io.eigr.spawn.java.domain.Common.PostalCodeStateOrBuilder>(
+              io.eigr.spawn.java.domain.DomainProto.PostalCodeState, io.eigr.spawn.java.domain.DomainProto.PostalCodeState.Builder, io.eigr.spawn.java.domain.DomainProto.PostalCodeStateOrBuilder>(
                   getPostalCode(),
                   getParentForChildren(),
                   isClean());
@@ -2568,12 +2568,12 @@ public final class Common {
     }
 
     // @@protoc_insertion_point(class_scope:domain.GetResponse)
-    private static final io.eigr.spawn.java.domain.Common.GetResponse DEFAULT_INSTANCE;
+    private static final io.eigr.spawn.java.domain.DomainProto.GetResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new io.eigr.spawn.java.domain.Common.GetResponse();
+      DEFAULT_INSTANCE = new io.eigr.spawn.java.domain.DomainProto.GetResponse();
     }
 
-    public static io.eigr.spawn.java.domain.Common.GetResponse getDefaultInstance() {
+    public static io.eigr.spawn.java.domain.DomainProto.GetResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2598,7 +2598,7 @@ public final class Common {
     }
 
     @java.lang.Override
-    public io.eigr.spawn.java.domain.Common.GetResponse getDefaultInstanceForType() {
+    public io.eigr.spawn.java.domain.DomainProto.GetResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2636,8 +2636,8 @@ public final class Common {
       "etResponse\022,\n\013postal_code\030\001 \001(\0132\027.domain" +
       ".PostalCodeState*F\n\020PostalCodeStatus\022\013\n\007" +
       "UNKNOWN\020\000\022\013\n\007CREATED\020\001\022\r\n\tNOT_FOUND\020\002\022\t\n" +
-      "\005FOUND\020\003B\033\n\031io.eigr.spawn.java.domainb\006p" +
-      "roto3"
+      "\005FOUND\020\003B(\n\031io.eigr.spawn.java.domainB\013D" +
+      "omainProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
