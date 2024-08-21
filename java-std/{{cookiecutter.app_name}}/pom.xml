@@ -5,7 +5,7 @@
     <groupId>{{ cookiecutter.group_id }}</groupId>
     <artifactId>{{ cookiecutter.artifact_id }}</artifactId>
     <version>{{ cookiecutter.version }}</version>
-    <name>{{ app_name }}</name>
+    <name>{{ cookiecutter.app_name }}</name>
     <description>{{ cookiecutter.app_description }}</description>
 
     <properties>
