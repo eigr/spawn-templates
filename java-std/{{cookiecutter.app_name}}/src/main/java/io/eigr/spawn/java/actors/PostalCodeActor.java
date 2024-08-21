@@ -20,7 +20,7 @@ import java.util.Optional;
 import static io.eigr.spawn.api.actors.behaviors.ActorBehavior.action;
 import static io.eigr.spawn.api.actors.behaviors.ActorBehavior.name;
 
-public class PostalCodeActor implements StatefulActor<DomainProto.PostalCodeState> {
+public final class PostalCodeActor implements StatefulActor<DomainProto.PostalCodeState> {
     private static final Logger log = LoggerFactory.getLogger(PostalCodeActor.class);
 
     private PostalCodeService postalCodeService;
@@ -30,8 +30,7 @@ public class PostalCodeActor implements StatefulActor<DomainProto.PostalCodeStat
         this.postalCodeService = behaviorCtx.getInjector().getInstance(PostalCodeService.class);
         return new UnNamedActorBehavior(
                 name("PostalCode"),
-                action("GetPostalCodeData", ActionBindings.of(DomainProto.GetRequest.class, this::getPostalCodeData))
-        );
+                action("GetPostalCodeData", ActionBindings.of(DomainProto.GetRequest.class, this::getPostalCodeData)));
     }
 
     private Value getPostalCodeData(ActorContext<DomainProto.PostalCodeState> context, DomainProto.GetRequest msg) {
@@ -49,7 +48,8 @@ public class PostalCodeActor implements StatefulActor<DomainProto.PostalCodeStat
 
         // If postal code data found, build state and response
         if (!postalCodeData.isEmpty()) {
-            DomainProto.PostalCodeState newState = buildPostalCodeState(msg.getCode(), postalCodeData, DomainProto.PostalCodeStatus.FOUND);
+            DomainProto.PostalCodeState newState = buildPostalCodeState(msg.getCode(), postalCodeData,
+                    DomainProto.PostalCodeStatus.FOUND);
             return createValueWithStateAndResponse(newState);
         }
 
@@ -67,7 +67,8 @@ public class PostalCodeActor implements StatefulActor<DomainProto.PostalCodeStat
         return Value.at().state(state).response(response).reply();
     }
 
-    private DomainProto.PostalCodeState buildPostalCodeState(String code, Map<String, String> data, DomainProto.PostalCodeStatus status) {
+    private DomainProto.PostalCodeState buildPostalCodeState(String code, Map<String, String> data,
+            DomainProto.PostalCodeStatus status) {
         return DomainProto.PostalCodeState.newBuilder()
                 .setCode(code)
                 .setCity(data.get("localidade"))
@@ -79,4 +80,3 @@ public class PostalCodeActor implements StatefulActor<DomainProto.PostalCodeStat
     }
 
 }
-

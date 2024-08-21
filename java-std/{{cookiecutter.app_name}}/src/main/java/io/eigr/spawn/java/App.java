@@ -9,6 +9,7 @@ import io.eigr.spawn.api.extensions.SimpleDependencyInjector;
 import io.eigr.spawn.java.actors.PostalCodeActor;
 import io.eigr.spawn.java.actors.RouterActor;
 import io.eigr.spawn.java.service.PostalCodeService;
+import io.eigr.spawn.java.service.ViaCepService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +23,7 @@ public final class App {
         Config cfg = Config.createDefaultConfig();
 
         DependencyInjector dependencyInjector = SimpleDependencyInjector.createInjector();
-        dependencyInjector.bind(PostalCodeService.class, new PostalCodeService());
+        dependencyInjector.bind(PostalCodeService.class, new ViaCepService());
 
         Spawn spawnSystem = new Spawn.SpawnSystem()
                 .create(cfg.spawnSystemName, dependencyInjector)
@@ -82,3 +83,4 @@ public final class App {
         }
     }
 }
+
