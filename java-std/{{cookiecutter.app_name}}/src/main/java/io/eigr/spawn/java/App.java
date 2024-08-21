@@ -5,9 +5,11 @@ import io.eigr.spawn.api.TransportOpts;
 import io.eigr.spawn.api.exceptions.SpawnException;
 import io.eigr.spawn.api.extensions.DependencyInjector;
 import io.eigr.spawn.api.extensions.SimpleDependencyInjector;
+
 import io.eigr.spawn.java.actors.PostalCodeActor;
 import io.eigr.spawn.java.actors.RouterActor;
 import io.eigr.spawn.java.service.PostalCodeService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,7 +40,7 @@ public final class App {
 
         spawnSystem.start();
 
-        log.info("Actor running and ready to connection at ports [{}] and [{}]", cfg.userFunctionPort, cfg.port);
+        log.info("Actor running and ready to connection at ports [{}]", cfg.userFunctionPort);
     }
 
     public record Config(String startupDelaySeconds,
@@ -55,13 +57,13 @@ public final class App {
             String userFunctionHost = System.getenv("USER_FUNCTION_HOST") != null ? System.getenv("USER_FUNCTION_HOST")
                     : "localhost";
             String userFunctionPort = System.getenv("USER_FUNCTION_PORT") != null ? System.getenv("USER_FUNCTION_PORT")
-                    : "{{ cookiecutter.app_port }}";
+                    : "8091";
             String spawnProxyHost = System.getenv("SPAWN_PROXY_HOST") != null ? System.getenv("SPAWN_PROXY_HOST")
                     : "localhost";
             String spawnProxyPort = System.getenv("SPAWN_PROXY_PORT") != null ? System.getenv("SPAWN_PROXY_PORT")
                     : "9001";
             String spawnSystemName = System.getenv("SPAWN_SYSTEM_NAME") != null ? System.getenv("SPAWN_SYSTEM_NAME")
-                    : "{{ cookiecutter.spawn_app_spawn_system }}";
+                    : "spawn-system";
 
             return new Config(startupDelaySeconds, userFunctionHost, userFunctionPort, spawnProxyHost,
                     spawnProxyPort, spawnSystemName);
