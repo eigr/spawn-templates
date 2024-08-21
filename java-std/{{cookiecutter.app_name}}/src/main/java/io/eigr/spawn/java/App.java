@@ -55,13 +55,13 @@ public final class App {
             String userFunctionHost = System.getenv("USER_FUNCTION_HOST") != null ? System.getenv("USER_FUNCTION_HOST")
                     : "localhost";
             String userFunctionPort = System.getenv("USER_FUNCTION_PORT") != null ? System.getenv("USER_FUNCTION_PORT")
-                    : "{{ app_port }}";
+                    : "{{ cookiecutter.app_port }}";
             String spawnProxyHost = System.getenv("SPAWN_PROXY_HOST") != null ? System.getenv("SPAWN_PROXY_HOST")
                     : "localhost";
             String spawnProxyPort = System.getenv("SPAWN_PROXY_PORT") != null ? System.getenv("SPAWN_PROXY_PORT")
                     : "9001";
             String spawnSystemName = System.getenv("SPAWN_SYSTEM_NAME") != null ? System.getenv("SPAWN_SYSTEM_NAME")
-                    : "{{ spawn_app_spawn_system }}";
+                    : "{{ cookiecutter.spawn_app_spawn_system }}";
 
             return new Config(startupDelaySeconds, userFunctionHost, userFunctionPort, spawnProxyHost,
                     spawnProxyPort, spawnSystemName);
