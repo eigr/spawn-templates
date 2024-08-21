@@ -2,7 +2,7 @@
 apiVersion: spawn-eigr.io/v1
 kind: ActorSystem
 metadata:
-  name: {{ cookiecutter.spawn_app_spawm_system }}
+  name: {{ cookiecutter.spawn_app_spawn_system }}
   namespace: {{ cookiecutter.spawn_app_namespace }}
 spec:
   statestore:
