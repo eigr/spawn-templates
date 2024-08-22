@@ -14,7 +14,9 @@
         <project.encoding>UTF-8</project.encoding>
 
         <!-- Lib versions -->
-        <spawn.sdk.version>{{ cookiecutter.spawn_sdk_version }}</spawn.sdk.version>
+        <!-- TODO: Remove this line when update java sdk lib to v1.4.2 -->
+        <!--  <spawn.sdk.version>{{ cookiecutter.spawn_sdk_version }}</spawn.sdk.version> -->
+        <spawn.sdk.version>v1.3.1</spawn.sdk.version>
         <protobuf.version>4.27.2</protobuf.version>
         <gson.version>2.11.0</gson.version>
     </properties>
@@ -128,7 +130,7 @@
                 <artifactId>protobuf-maven-plugin</artifactId>
                 <version>0.6.1</version>
                 <configuration>
-                    <protocArtifact>com.google.protobuf:protoc:3.19.2:exe:${os.detected.classifier}</protocArtifact>
+                    <protocArtifact>com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}</protocArtifact>
                 </configuration>
                 <executions>
                     <execution>
