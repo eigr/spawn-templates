@@ -41,7 +41,7 @@ public final class App {
 
         spawnSystem.start();
 
-        log.info("Actor running and ready to connection at ports [{}]", cfg.userFunctionPort);
+        log.info("Actor running and ready to accept connections at port [{}]", cfg.userFunctionPort);
     }
 
     public record Config(String startupDelaySeconds,
@@ -58,7 +58,7 @@ public final class App {
             String userFunctionHost = System.getenv("USER_FUNCTION_HOST") != null ? System.getenv("USER_FUNCTION_HOST")
                     : "localhost";
             String userFunctionPort = System.getenv("USER_FUNCTION_PORT") != null ? System.getenv("USER_FUNCTION_PORT")
-                    : "8091";
+                    : "8090";
             String spawnProxyHost = System.getenv("SPAWN_PROXY_HOST") != null ? System.getenv("SPAWN_PROXY_HOST")
                     : "localhost";
             String spawnProxyPort = System.getenv("SPAWN_PROXY_PORT") != null ? System.getenv("SPAWN_PROXY_PORT")
