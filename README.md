@@ -4,6 +4,12 @@
 
 ### Template v1.4.3
 
+### :sparkles: New Features
+- [`f03a574`](https://github.com/eigr/spawn-templates/commit/f03a5742743b3c31b29e7e8ade9d7dc7a9f6d487) - add nodejs defaults *(commit by @sleipnir)*
+
+### :bug: Bug Fixes
+- [`08e9894`](https://github.com/eigr/spawn-templates/commit/08e9894a65cd538a7de7774a3ebdab0af48235d3) - typo *(commit by @sleipnir)*
+
 ### :recycle: Refactors
 - [`8107300`](https://github.com/eigr/spawn-templates/commit/81073007ad72ece27d59dc0ae90ce032908d0074) - better readmes *(commit by @sleipnir)*
 - 
