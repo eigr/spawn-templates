@@ -1,4 +1,17 @@
 {
     "app_name": "spawn_example",
-    "spawn_system": "spawn-system"
+    "app_description": "Spawn Node App.",
+    "app_image_tag": "ttl.sh/spawn-nodejs-example:1h",
+    "spawn_system": "spawn-system",
+    "spawn_app_spawn_system": "spawn-system",
+    "spawn_app_namespace": "default",
+    "spawn_app_statestore_type": "native",
+    "spawn_sdk_version": "v1.3.1",
+    "_copy_without_render": [
+        ".github",
+        "docs",
+        ".dockerignore",
+        ".gitignore",
+        ".envrc"
+    ]
 }
