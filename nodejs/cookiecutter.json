@@ -1,5 +1,6 @@
 {
     "app_name": "spawn_example",
+    "app_name_hyphenate": "spawn_example",
     "app_description": "Spawn Node App.",
     "app_image_tag": "ttl.sh/spawn-nodejs-example:1h",
     "spawn_system": "spawn-system",
