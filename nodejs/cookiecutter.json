@@ -3,6 +3,7 @@
     "app_name_hyphenate": "spawn_example",
     "app_description": "Spawn Node App.",
     "app_image_tag": "ttl.sh/spawn-nodejs-example:1h",
+    "app_port": 8091,
     "spawn_system": "spawn-system",
     "spawn_app_spawn_system": "spawn-system",
     "spawn_app_namespace": "default",

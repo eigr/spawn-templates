@@ -9,6 +9,7 @@
 
 ### :bug: Bug Fixes
 - [`08e9894`](https://github.com/eigr/spawn-templates/commit/08e9894a65cd538a7de7774a3ebdab0af48235d3) - typo *(commit by @sleipnir)*
+- [`3432dcf`](https://github.com/eigr/spawn-templates/commit/3432dcf9152057dee4d3087af9e900b759240b01) - correct attributes *(commit by @sleipnir)*
 
 ### :recycle: Refactors
 - [`8107300`](https://github.com/eigr/spawn-templates/commit/81073007ad72ece27d59dc0ae90ce032908d0074) - better readmes *(commit by @sleipnir)*
